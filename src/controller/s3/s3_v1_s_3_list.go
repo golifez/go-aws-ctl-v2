@@ -6,8 +6,8 @@ import (
 
 	v1 "github.com/golifez/go-aws-ctl-v2/api/s3/v1"
 	"github.com/golifez/go-aws-ctl-v2/clinet"
-	awsStc "github.com/golifez/go-aws-ctl-v2/internal/model/aws_stc"
-	"github.com/golifez/go-aws-ctl-v2/internal/service"
+	awsStc "github.com/golifez/go-aws-ctl-v2/src/model/aws_stc"
+	"github.com/golifez/go-aws-ctl-v2/src/service"
 )
 
 // 查询存储桶列表

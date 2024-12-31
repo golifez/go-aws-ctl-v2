@@ -6,8 +6,8 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
-	awsStc "github.com/golifez/go-aws-ctl-v2/internal/model/aws_stc"
-	"github.com/golifez/go-aws-ctl-v2/internal/service"
+	awsStc "github.com/golifez/go-aws-ctl-v2/src/model/aws_stc"
+	"github.com/golifez/go-aws-ctl-v2/src/service"
 )
 
 type sS3op struct {

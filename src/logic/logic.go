@@ -5,5 +5,5 @@
 package logic
 
 import (
-	_ "github.com/golifez/go-aws-ctl-v2/internal/logic/s3"
+	_ "github.com/golifez/go-aws-ctl-v2/src/logic/s3"
 )

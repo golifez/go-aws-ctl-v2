@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/golifez/go-aws-ctl-v2/internal/cmd/s3"
+	"github.com/golifez/go-aws-ctl-v2/src/cmd/s3"
 )
 
 func init() {

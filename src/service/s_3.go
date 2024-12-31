@@ -8,7 +8,7 @@ package service
 import (
 	"context"
 
-	awsStc "github.com/golifez/go-aws-ctl-v2/internal/model/aws_stc"
+	awsStc "github.com/golifez/go-aws-ctl-v2/src/model/aws_stc"
 )
 
 type (
