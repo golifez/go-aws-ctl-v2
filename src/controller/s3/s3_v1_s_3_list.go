@@ -5,19 +5,17 @@ import (
 	"fmt"
 
 	v1 "github.com/golifez/go-aws-ctl-v2/api/s3/v1"
-	"github.com/golifez/go-aws-ctl-v2/clinet"
 	awsStc "github.com/golifez/go-aws-ctl-v2/src/model/aws_stc"
 	"github.com/golifez/go-aws-ctl-v2/src/service"
 )
 
 // 查询存储桶列表
 func (c *ControllerV1) S3List(ctx context.Context, req *v1.S3ListReq) (res *v1.S3ListRes, err error) {
-	s3cl := clinet.GetS3clinet("")
-	if s3cl != nil {
+	if req.S3cl != nil {
 		fmt.Println("客户端正常")
 	}
 	result, err := service.S3Op().GetS3BucketList(ctx, &awsStc.S3opInput{
-		S3Client: s3cl,
+		S3Client: req.S3cl,
 	})
 	if err != nil {
 		return nil, err
