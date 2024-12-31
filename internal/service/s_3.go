@@ -7,18 +7,18 @@ package service
 
 import (
 	"context"
+
+	"github.com/aws/aws-sdk-go-v2/service/s3"
 )
 
 type (
 	IS3Op interface {
-		// 获取带region的客户端
-		GetS3clinetWithRegion(region string) *sS3op
 		// 获取存储桶列表
-		GetS3BucketList(ctx context.Context) ([]string, error)
+		GetS3BucketList(ctx context.Context, s3clinet *s3.Client) ([]string, error)
 		// 获取S3桶对象列表
-		GetS3BucketObjectList(ctx context.Context, bucketName string, region string) ([]string, error)
+		GetS3BucketObjectList(ctx context.Context, s3clinet *s3.Client) ([]string, error)
 		// 创建S3桶
-		CreateS3Bucket(ctx context.Context, bucketName string) error
+		CreateS3Bucket(ctx context.Context, s3clinet *s3.Client) error
 	}
 )
 

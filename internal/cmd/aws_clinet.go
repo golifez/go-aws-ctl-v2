@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"runtime"
 
-	clinet "github.com/golifez/go-aws-ctl-v2/cmd/aws_clinet"
+	clinet "github.com/golifez/go-aws-ctl-v2/src/cmd/aws_clinet"
 )
 
 // 使用更可靠的路径解析方式
@@ -18,8 +18,8 @@ var (
 )
 
 func GetNewAwsClinet(regoin string) (aws *clinet.AwsClient) {
-	ConfigFile := clinet.NewConfigFile(configPath, credentialsPath, "default")
-	ct := clinet.Awsconfig{
+	ConfigFile := aws.NewConfigFile(configPath, credentialsPath, "default")
+	ct := aws.Awsconfig{
 		ConfigFile: ConfigFile,
 	}
 	cfg, err := ct.LoadConfigFromConfigFile()
@@ -29,7 +29,7 @@ func GetNewAwsClinet(regoin string) (aws *clinet.AwsClient) {
 	if err != nil {
 		fmt.Println("err:", err)
 	}
-	client := clinet.NewAwsClient(cfg)
+	client := aws.NewAwsClient(cfg)
 	fmt.Println("获取aws客户端成功:", client)
 	return client
 }

@@ -1,11 +1,10 @@
 package main
 
 import (
-	_ "github.com/golifez/go-aws-ctl-v2/cmd"
-	_ "github.com/golifez/go-aws-ctl-v2/internal/logic"
-
 	"github.com/golifez/go-aws-ctl-v2/internal/cmd"
+	_ "github.com/golifez/go-aws-ctl-v2/internal/logic"
 	_ "github.com/golifez/go-aws-ctl-v2/internal/packed"
+	_ "github.com/golifez/go-aws-ctl-v2/src/cmd"
 )
 
 func main() {
