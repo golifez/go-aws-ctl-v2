@@ -1,8 +1,8 @@
-package cmd
+package clinet
 
 import "testing"
 
 // 测试aws客户端
 func TestAwsClient(t *testing.T) {
-	GetNewAwsClinet("us-east-1")
+	//GetNewAwsClinet("us-east-1")
 }

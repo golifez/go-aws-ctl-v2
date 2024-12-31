@@ -8,17 +8,17 @@ package service
 import (
 	"context"
 
-	"github.com/aws/aws-sdk-go-v2/service/s3"
+	awsStc "github.com/golifez/go-aws-ctl-v2/internal/model/aws_stc"
 )
 
 type (
 	IS3Op interface {
 		// 获取存储桶列表
-		GetS3BucketList(ctx context.Context, s3clinet *s3.Client) ([]string, error)
+		GetS3BucketList(ctx context.Context, input *awsStc.S3opInput) ([]string, error)
 		// 获取S3桶对象列表
-		GetS3BucketObjectList(ctx context.Context, s3clinet *s3.Client) ([]string, error)
+		GetS3BucketObjectList(ctx context.Context, input *awsStc.S3opInput) ([]string, error)
 		// 创建S3桶
-		CreateS3Bucket(ctx context.Context, s3clinet *s3.Client) error
+		CreateS3Bucket(ctx context.Context, input *awsStc.S3opInput) error
 	}
 )
 
